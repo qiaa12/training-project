@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- model.name form view -->
+    <record id="tiket_baru_view_form_wizzard" model="ir.ui.view">
+        <field name="name">Tiket Baru</field>
+        <field name="model">qiabioskop.tiketbaru</field>
+        <field name="arch" type="xml">
+            <form string="Form Tiket Baru">
+                    <group>
+                       <field name="tiket_id"/>
+                       <field name="jumlah"/>    
+                    </group>
+                    <footer>
+                        <button name="button_tiket_baru" 
+                                type="object" 
+                                string="Input Tiket"
+                                class="btn btn-primary" 
+                            />
+                        <button string="Cancel" 
+                                special="cancel" 
+                                class="btn btn-secondary"
+                            />                   
+                    </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- qiabioskop.tiketbaru action window -->
+    <record id="tiket_baru_action_wizzard" model="ir.actions.act_window">
+        <field name="name">Tiket Baru</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">qiabioskop.tiketbaru</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="tiket_baru_view_form_wizzard"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="tiket_baru_menu_action_wizzard" 
+        name="Input Tiket" 
+        parent="qiabioskop_menu_root" 
+        action="tiket_baru_action_wizzard" 
+        sequence="48"/>
+</odoo>

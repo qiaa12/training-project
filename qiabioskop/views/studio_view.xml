@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- qiabioskop.studio tree view -->
+    <record id="qiabioskop_studio_view_tree" model="ir.ui.view">
+        <field name="name">List Studio</field>
+        <field name="model">qiabioskop.studio</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="kd_studio"/>
+                <field name="kursi_ids"/>
+                <field name="jml_kursi"/>
+                <field name="pilihan"/>
+                <field name="film_studio_id"/>               
+            </tree>
+        </field>
+    </record>
+
+    <!-- qiabioskop.studio form view -->
+    <record id="qiabioskop_studio_view_form" model="ir.ui.view">
+        <field name="name">Form Studio</field>
+        <field name="model">qiabioskop.studio</field>
+        <field name="arch" type="xml">
+            <form string="Form Studio">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="kd_studio"/>
+                        <field name="kursi_ids"/>
+                        <field name="jml_kursi"/>
+                        <field name="pilihan"/>              
+                    </group>
+                    <group>
+                        <field name="film_studio_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- qiabioskop.studio action window -->
+    <record id="qiabioskop_studio_action" model="ir.actions.act_window">
+        <field name="name">List Studio</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">qiabioskop.studio</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="qiabioskop_studio_menu_act" 
+              name="List Studio" 
+              parent="qiabioskop_layanan_menu_categ" 
+              action="qiabioskop_studio_action" 
+              sequence="20"/>
+              
+
+</odoo>

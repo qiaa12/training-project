@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+     <!-- This Menu Item will appear in the Upper bar, that's why It needs NO parent or action -->
+    <menuitem id="qiabioskop_menu_root" 
+              name="Qia Bioskop" 
+              sequence="10"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="qiabioskop_film_menu_categ" 
+              name="Film" 
+              parent="qiabioskop_menu_root" 
+              sequence="10"/>
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="qiabioskop_pegawai_menu_categ" 
+              name="Pegawai" 
+              parent="qiabioskop_menu_root" 
+              sequence="20"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="qiabioskop_layanan_menu_categ" 
+              name="Layanan" 
+              parent="qiabioskop_menu_root" 
+              sequence="30"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="qiabioskop_tiket_menu_categ" 
+              name="Tiket" 
+              parent="qiabioskop_menu_root" 
+              sequence="35"/>
+
+    <!-- This Menu Item Must have a parent -->
+    <menuitem id="qiabioskop_transaksi_menu_categ" 
+              name="Transaksi" 
+              parent="qiabioskop_menu_root" 
+              sequence="40"/>
+     
+    </odoo>

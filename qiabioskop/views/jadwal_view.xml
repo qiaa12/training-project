@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- qiabioskop.jadwal tree view -->
+    <record id="qiabioskop_jadwal_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Jadwal</field>
+        <field name="model">qiabioskop.jadwal</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="jam_mulai"/>
+                <field name="jam_berakhir"/>      
+                <field name="pelanggan_id" domain="[('is_konsumen', '=', 'true')]"/> 
+                <field name="film_id"/>            
+            </tree>
+        </field>
+    </record>
+
+    <!-- qiabioskop.jadwal form view -->
+    <record id="qiabioskop_jadwal_view_form" model="ir.ui.view">
+        <field name="name">Form Jadwal</field>
+        <field name="model">qiabioskop.jadwal</field>
+        <field name="arch" type="xml">
+            <form string="Jadwal Tayang">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="jam_mulai"/>
+                        <field name="jam_berakhir"/>            
+                    </group>
+                    <group>
+                        <field name="pelanggan_id"/> 
+                        <field name="film_id"/> 
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- qiabioskop.jadwal action window -->
+    <record id="qiabioskop_jadwal_action" model="ir.actions.act_window">
+        <field name="name">List Jadwal Tayang</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">qiabioskop.jadwal</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="qiabioskop_jadwal_menu_act" 
+              name="List Jadwal Tayang" 
+              parent="qiabioskop_layanan_menu_categ" 
+              action="qiabioskop_jadwal_action" 
+              sequence="10"/>
+
+</odoo>

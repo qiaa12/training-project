@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- qiabioskop.film tree view -->
+    <record id="qiabioskop_film_view_tree" model="ir.ui.view">
+        <field name="name">Daftar Film</field>
+        <field name="model">qiabioskop.film</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="durasi"/>
+                <field name="produser"/>
+                <field name="sutradara"/>
+                <field name="penulis"/>
+                <field name="produksi"/>
+                <field name="aktor"/>
+                <field name="sinopsis"/>
+                <field name="genre_no"/>
+                <field name="jadwal_ids"/>
+                <field name="studio_ids"/>     
+            </tree>
+        </field>
+    </record>
+
+    <!-- qiabioskop.film form view -->
+    <record id="qiabioskop_film_view_form" model="ir.ui.view">
+        <field name="name">Form Film</field>
+        <field name="model">qiabioskop.film</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                    <group name="film" string="Detail Film">            
+                        <field name="durasi"/>
+                        <field name="produser"/>
+                        <field name="sutradara"/>
+                        <field name="penulis"/>
+                        <field name="produksi"/>
+                        <field name="aktor"/>
+                        <field name="sinopsis"/>                
+                    </group>
+                    <group name="genre" string="Kelompok Film">
+                        <field name="genre_no"/>
+                        <field name="jadwal_ids"/>
+                        <field name="studio_ids"/>                       
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- qiabioskop.film action window -->
+    <record id="qiabioskop_film_action" model="ir.actions.act_window">
+        <field name="name">Pilihan Film</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">qiabioskop.film</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="qiabioskop_film_menu_act" 
+              name="Pilihan Film"        
+              parent="qiabioskop_film_menu_categ" 
+              action="qiabioskop_film_action" 
+              sequence="30"/>
+</odoo>

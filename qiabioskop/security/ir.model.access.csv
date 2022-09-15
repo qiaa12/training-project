@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_qiabioskop_genre,acces.qiabioskop.genre,model_qiabioskop_genre,,1,1,1,1
+access_qiabioskop_film,acces.qiabioskop.film,model_qiabioskop_film,,1,1,1,1
+access_qiabioskop_person,acces.qiabioskop.person,model_qiabioskop_person,,1,1,1,1
+access_qiabioskop_kasir,acces.qiabioskop.kasir,model_qiabioskop_kasir,,1,1,1,1
+access_qiabioskop_cleaningservice,acces.qiabioskop.cleaningservice,model_qiabioskop_cleaningservice,,1,1,1,1
+access_qiabioskop_jadwal,acces.qiabioskop.jadwal,model_qiabioskop_jadwal,,1,1,1,1
+access_qiabioskop_studio,acces.qiabioskop.studio,model_qiabioskop_studio,,1,1,1,1
+access_qiabioskop_kursi,acces.qiabioskop.kursi,model_qiabioskop_kursi,,1,1,1,1
+access_qiabioskop_tiket,acces.qiabioskop.tiket,model_qiabioskop_tiket,,1,1,1,1
+access_qiabioskop_penjualan,acces.qiabioskop.penjualan,model_qiabioskop_penjualan,,1,1,1,1
+access_qiabioskop_detailpenjualan,acces.qiabioskop.detailpenjualan,model_qiabioskop_detailpenjualan,,1,1,1,1
+access_qiabioskop_tiketbaru,acces.qiabioskop.tiketbaru,model_qiabioskop_tiketbaru,,1,1,1,1
+access_qiabioskop_penjualanreport,acces.qiabioskop.penjualanreport,model_qiabioskop_penjualanreport,,1,1,1,1
